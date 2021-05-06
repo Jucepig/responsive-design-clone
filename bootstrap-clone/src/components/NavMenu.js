@@ -1,26 +1,12 @@
-import {Component} from 'react'
 
-class NavMenu extends Component {
-  constructor() {
-    super()
-
-    this.state={
-      dropdown: false
-    }
-  }
-
-  toggleDropdown= () => {
-    this.setState({dropdown: !this.state.dropdown})
-  }
-
-  render() {
+function NavMenu (props) {
     return(
       <div className="container flex">
         <div id="title" className="flex">
           <span id="logo">Start Bootstrap</span>
-          <img onClick={() => this.toggleDropdown()} src="https://drive.google.com/uc?export=view&id=1pTpM_a03RPdKveixfO7KZuqvEsC7rpEM"id="menu-btn"/>
+          <img onClick={()=>props.toggleDropdownFn()} src="https://drive.google.com/uc?export=view&id=1pTpM_a03RPdKveixfO7KZuqvEsC7rpEM"id="menu-btn" alt="hamburger-menu"/>
         </div>
-        <nav id="nav" className={`flex ${this.state.dropdown?'dropdown':''}`}>
+        <nav id="nav" className="flex">
           <span className="nav-item">services</span>
           <span className="nav-item">portfolio</span>
           <span className="nav-item">about</span>
@@ -30,6 +16,5 @@ class NavMenu extends Component {
       </div>
     )
   }
-}
 
 export default NavMenu
