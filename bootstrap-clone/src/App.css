@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* font-family: 'Bebas Neue', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+/* font-family: 'Architects Daughter', cursive; */
+
+.flex {
+  display: flex;
+}
+
+#header {
+  height: 150px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.container {
+  height: 100%;
+  width: 80%;
+  justify-content: space-between;
+  position: relative;
+}
+
+#title {
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 300px;
+}
+
+#logo {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 30px;
+}
+
+#menu-btn {
+  display: none;
+}
+
+#nav {
+  height: 50%;
+  width: 600px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  margin-right: 20px;
+  letter-spacing: 3px;
+}
+
+#main {
+  background-image: url("https://images.unsplash.com/photo-1619867056190-d86aaf07a1c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+@media(max-width: 992px) {
+  #header {
+    flex-direction: column;
+    position: static;
+    background-color:darkcyan;
+    height:auto;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+  }
+
+  #title {
+    justify-content: space-between;
+    height: 50px;
+    font-size: 25px;
+    width: 100%;
+  }
+
+  #logo {
+    font-size: 27px;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    width: 50px;
+  }
+
+  #nav {
+    height: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    position:absolute;
+    top: -250px;
+  }
+
+  .nav-item {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+.dropdown {
+  animation-name: dropdown;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+@keyframes dropdown {
+  from{
+    position: absolute;
+  }
+  to{
+    position: static;
+  }
+}
